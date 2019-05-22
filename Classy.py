@@ -11,4 +11,4 @@ class Classy(object):
                 totalClassiness += classyDict[item]
             except KeyError:
                 pass
-        return totalClassiness
+        return totalClassiness  
