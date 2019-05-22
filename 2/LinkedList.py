@@ -31,6 +31,21 @@ class LinkedList(object):
             count += 1
         return None
 
+##Functions for turning into STACK
+
+    def insert_first(self, new_element):
+        "Insert new element as the head of the LinkedList"
+        new_element.next = self.head
+        self.head = new_element
+
+    def delete_first(self):
+        "Delete the first (head) element in the LinkedList as return it"
+        temp = self.head
+        if self.head:
+            self.head = self.head.next
+            temp.next = None
+        return temp
+
     def insert(self, new_element, position):
         """Insert a new node at the given position.
         Assume the first position is "1".
